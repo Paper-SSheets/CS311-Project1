@@ -16,20 +16,18 @@ public class Node<T> extends Interval{
      *  Empty treap node constructor
      */
     public Node() {
-        new Node(null, 0 , 0 );
+        new Node(null);
 
     }
 
     /**
      *  Non-empty treap node constructor
      * @param i
-     * @param priority
-     * @param max
      */
-    public Node(Interval i, int priority, int max) {
+    public Node(Interval i) {
         this.i = i;
-        this.priority = priority; //not sure how priority is generated
-        this.max = max;
+        this.priority = 0; //priority is randomly generated when inserted into treap
+        this.max = 0;
         this.left = this.right =  this. parent = null;
     }
 

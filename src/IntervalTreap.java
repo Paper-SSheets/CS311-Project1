@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -18,6 +19,9 @@ public class IntervalTreap extends Node{
      * Constructor
      */
     public IntervalTreap() {
+        treapSize = 0;
+        treapHeight = 0;
+        root = null;
     }
 
     /**
@@ -60,7 +64,16 @@ public class IntervalTreap extends Node{
      * @param z
      */
     void intervalInsert(Node z) {
+        //check and set max of node z and all descendent nodes
 
+        Random rand = new Random();
+        z.priority = rand.nextInt(50);
+
+        if (root == null) {
+            root = z;
+        }
+
+        treapSize++;
     }
 
     /**
