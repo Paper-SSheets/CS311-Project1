@@ -1,28 +1,23 @@
 /**
- *
- *
- *
+ * The Interval class represents intervals. To avoid problems with numerical
+ * precision, the endpoints of intervals will be integers.
  *
  * @author Steven Sheets    - smsheets@iastate.edu
  * @author Noah Frederiksen - nfred99@iastate.edu
  */
 public class Interval {
 
-    int low;
-    int high;
+    /** The low endpoint of the Interval. */
+    private int low;
+
+    /** The high endpoint of the Interval. */
+    private int high;
 
     /**
-     * Empty interval constructor which takes the form [a,b]
-     * where a ≤ b
-     */
-    public Interval() {
-        new Interval(0, 0);
-    }
-
-    /**
-     * Interval consturctor wtih the following params
-     * @param low - lowest value of interval
-     * @param high - highest value of interval
+     * Constructs a new instance of this Interval class.
+     *
+     * @param low - The low endpoint of the Interval
+     * @param high - The high endpoint of the Interval
      */
     public Interval(int low, int high) {
         this.low = low;
@@ -30,24 +25,39 @@ public class Interval {
     }
 
     /**
+     * Returns the low endpoint of this Interval.
      *
-     *  Return the lowest value of interval
-     *
-     * @return low value
+     * @return - The low endpoint of this Interval
      */
     public int getLow() {
         return low;
     }
 
     /**
+     * Sets the low endpoint of this Interval.
      *
-     *  Return the highest value of interval
+     * @param low - The low endpoint of this Interval
+     */
+    public void setLow(int low) {
+        this.low = low;
+    }
+
+
+    /**
+     * Returns the high endpoint of this Interval.
      *
-     * @return high value
+     * @return - The high endpoint of this Interval
      */
     public int getHigh() {
         return high;
     }
+
+    /**
+     * Sets the high endpoint of this Interval.
+     *
+     * @param high - The high endpoint of this Interval
+     */
+    public void setHigh(int high) {
+        this.high = high;
+    }
 }
-
-
