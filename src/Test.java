@@ -24,8 +24,8 @@ public class Test {
         System.out.println(intTreap.getRoot().getIMax());
         System.out.println(intTreap.getRoot().getPriority());
 
-        System.out.println("[" + intTreap.getRoot().getInterval().getLow() +
-                            ", " + intTreap.getRoot().getInterval().getHigh() + "]");
+        System.out.println("[" + intTreap.getRoot().getInterv().getLow() +
+                            ", " + intTreap.getRoot().getInterv().getHigh() + "]");
 
 
     }

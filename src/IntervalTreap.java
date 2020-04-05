@@ -2,26 +2,25 @@ import java.util.List;
 import java.util.Random;
 
 /**
- *
- *
- *
+ * Represents an IntervalTreap.
  *
  * @author Steven Sheets    - smsheets@iastate.edu
  * @author Noah Frederiksen - nfred99@iastate.edu
  */
-public class IntervalTreap extends Node{
+public class IntervalTreap {
 
-    int treapSize;
-    int treapHeight;
-    Node root = new Node();
+    /** The root of this IntervalTreap. */
+    private Node root;
+
+    /** The size of this IntervalTreap. */
+    private int size;
 
     /**
-     * Constructor
+     * Constructs a new instance of this IntervalTreap class.
      */
     public IntervalTreap() {
-        treapSize = 0;
-        treapHeight = 0;
-        root = null;
+        this.root = null;
+        this.size = 0;
     }
 
     /**
@@ -41,8 +40,9 @@ public class IntervalTreap extends Node{
      * @return size
      */
     public int getSize() {
-        return treapSize;
+        return size;
     }
+
 
     /**
      *
@@ -51,7 +51,7 @@ public class IntervalTreap extends Node{
      * @return height
      */
     public int getHeight() {
-        return treapHeight;
+        return root.getHeight();
     }
 
     /**
@@ -63,7 +63,7 @@ public class IntervalTreap extends Node{
      *
      * @param z
      */
-    void intervalInsert(Node z) {
+    public void intervalInsert(Node z) {
         //check and set max of node z and all descendent nodes
 
         Random rand = new Random();

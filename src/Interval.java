@@ -34,16 +34,6 @@ public class Interval {
     }
 
     /**
-     * Sets the low endpoint of this Interval.
-     *
-     * @param low - The low endpoint of this Interval
-     */
-    public void setLow(int low) {
-        this.low = low;
-    }
-
-
-    /**
      * Returns the high endpoint of this Interval.
      *
      * @return - The high endpoint of this Interval
@@ -52,10 +42,21 @@ public class Interval {
         return high;
     }
 
+    /* ******** "NON-REQUIRED" METHODS BELOW ********* */
+
+    /**
+     * Sets the low endpoint of this Interval.
+     *
+     * @param low - The new low endpoint of this Interval
+     */
+    public void setLow(int low) {
+        this.low = low;
+    }
+
     /**
      * Sets the high endpoint of this Interval.
      *
-     * @param high - The high endpoint of this Interval
+     * @param high - The new high endpoint of this Interval
      */
     public void setHigh(int high) {
         this.high = high;

@@ -1,82 +1,169 @@
 /**
- *
- *
- *
+ * Represents the Nodes in the IntervalTreap.
  *
  * @author Steven Sheets    - smsheets@iastate.edu
  * @author Noah Frederiksen - nfred99@iastate.edu
  */
-public class Node<T> extends Interval{
+public class Node {
 
-    Interval i;
-    int max, priority;
-    Node left, right, parent;
+    /** The Interval of this Node. */
+    private Interval interv;
+
+    /** The left child of this Node. */
+    private Node left;
+
+    /** The right child of this Node. */
+    private Node right;
+
+    /** The parent of this Node. */
+    private Node parent;
+
+    /** The imax of this Node. */
+    private int imax;
+
+    /** The priority of this Node. */
+    private int priority;
+
+    /** The height of this Node. */
+    private int height;
 
     /**
-     *  Empty treap node constructor
-     */
-    public Node() {
-        new Node(null);
-
-    }
-
-    /**
-     *  Non-empty treap node constructor
-     * @param i
+     * Constructs a new instance of this Node class with a
+     * given Interval i.
+     *
+     * @param i - The Interval to be used with this Node.
      */
     public Node(Interval i) {
-        this.i = i;
-        this.priority = 0; //priority is randomly generated when inserted into treap
-        this.max = 0;
-        this.left = this.right =  this. parent = null;
+        interv = i;
+        left = right = parent = null;
+        height = imax = priority = 0; // imax and priority are immediately modified to legitimate values.
     }
 
     /**
-     * Return parent of node
-     * @return parent
+     * Returns the parent of this Node.
+     *
+     * @return - The parent of this Node
      */
     public Node getParent() {
         return parent;
     }
 
-
     /**
-     * return left child of node
-     * @return left child
+     * Returns the left child of this Node.
+     *
+     * @return - The left child of this Node
      */
-    public Node getLeft(){
+    public Node getLeft() {
         return left;
     }
 
     /**
-     * Return right child of treap node
-     * @return right child
+     * Returns the right child of this Node.
+     *
+     * @return - The right child of this Node
      */
     public Node getRight() {
         return right;
     }
 
     /**
-     * Returns interval of treap node
-     * @return interval
+     * Returns the Interval interv of this class.
+     *
+     * @return - The Interval interv of this class
      */
-    public Interval getInterval() {
-        return i;
+    public Interval getInterv() {
+        return interv;
     }
 
     /**
-     * Returns the max right endpoint of this node and all descendent nodes
-     * @return
+     * Returns the imax of this Node.
+     *
+     * @return - The imax of this Node
      */
     public int getIMax() {
-        return max;
+        return imax;
     }
 
     /**
-     * Returns the priority value of this node
-     * @return priority
+     * Returns the priority of this Node.
+     *
+     * @return - The priority of this Node
      */
     public int getPriority() {
         return priority;
+    }
+
+    /* ******** "NON-REQUIRED" METHODS BELOW ********* */
+
+    /**
+     * Sets the parent of this Node.
+     *
+     * @param parent - The new parent of the this Node
+     */
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    /**
+     * Sets the left child of this Node.
+     *
+     * @param left - The new left child of this Node
+     */
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    /**
+     * Sets the right child of this Node.
+     *
+     * @param right - The new right child of this Node
+     */
+    public void setRight(Node right) {
+        this.right = right;
+    }
+
+    /**
+     * Sets the Interval interv of this class.
+     *
+     * @param interv - The new interv of this class
+     */
+    public void setInterv(Interval interv) {
+        this.interv = interv;
+    }
+
+    /**
+     * Sets the imax of this Node.
+     *
+     * @param imax - The new imax of this Node
+     */
+    public void setIMax(int imax) {
+        this.imax = imax;
+    }
+
+    /**
+     * Sets the priority of this Node.
+     *
+     * @param priority - The new priority of this Node
+     */
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    /**
+     * Returns the height of this Node.
+     *
+     * @return - The height of this Node
+     */
+    public int getHeight() {
+        return height;
+    }
+
+    /**
+     * Sets the height of this Node.
+     *
+     * @param height - The new height of this Node
+     */
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
