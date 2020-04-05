@@ -42,7 +42,9 @@ public class Interval {
         return high;
     }
 
+
     /* ******** "NON-REQUIRED" METHODS BELOW ********* */
+
 
     /**
      * Sets the low endpoint of this Interval.

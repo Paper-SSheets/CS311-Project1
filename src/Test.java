@@ -8,9 +8,6 @@
  */
 public class Test {
     public static void main(String[] args) {
-
-
-
         Node node1 = new Node(new Interval(3, 6));
         Node node2 = new Node(new Interval(4, 9));
         Node node3 = new Node(new Interval(1, 2));
