@@ -166,6 +166,7 @@ public class IntervalTreap {
                     leftRotation(y.getRight());
                 }
             }
+            updateIMaxPostDeletion(y);
         }
 
         this.size--;
@@ -191,7 +192,6 @@ public class IntervalTreap {
                 x = x.getRight();
             }
         }
-
         return x;
     }
 
